@@ -47,8 +47,8 @@ function reactNativeMacOSGeneratePath() {
 }
 
 function getNpmRegistryUrl(): string {
-  const reg = execSync('npm config get registry', {encoding: 'utf-8'}).trim();
   try {
+    const reg = execSync('npm config get registry', {encoding: 'utf-8'}).trim();
     const url = new URL(reg);
     if (url) {
       return reg;
